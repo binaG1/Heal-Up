@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+     background-color: aquamarine;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     padding: 200px;
+
+
+.login-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: black;
+  width: 350px;
+  padding: 40px;
+  text-align: center;
+  height: auto;
+  position: relative;
+}
+
+.login-box h2 {
+  color: #268850;
+  
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 11px;
+}
+
+.login-box a {
+   color: #43b574;
+   text-decoration: none;
+   font-size: 15px;
+    height: 100px;
+    text-align: center;
+
+}
+h1{
+    
+    color: #2e8b57;
+}
+button:hover{
+    background-color : rgb(223, 189, 141);
+    color: white;
+
+}
+.medicine-icon {
+  position: absolute;
+  top: -50px;
+  right: 370px;
+  font-size: 80px;
+}
+.social-icons img{
+   width: 300px;
+  height: 70px;
+    
+}
+
+
+
