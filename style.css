@@ -1,11 +1,13 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-     background-color: aquamarine;
-     display: flex;
-     justify-content: center;
-     text-align: center;
-     padding: 200px;
-
+*{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.login-page {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 200px;
+}
 
 .login-box {
   background-color: white;
@@ -21,7 +23,7 @@ body{
 
 .login-box h2 {
   color: #268850;
-  
+
 }
 
 .login-box input {
@@ -44,33 +46,143 @@ body{
 }
 
 .login-box a {
-   color: #43b574;
-   text-decoration: none;
-   font-size: 15px;
-    height: 100px;
-    text-align: center;
+  color: #43b574;
+  text-decoration: none;
+  font-size: 15px;
+  height: 100px;
+  text-align: center;
 
 }
-h1{
-    
-    color: #2e8b57;
+
+.login-box h1 {
+
+  color: #2e8b57;
 }
-button:hover{
-    background-color : rgb(223, 189, 141);
-    color: white;
+
+.box button:hover {
+  background-color: rgb(223, 189, 141);
+  color: white;
 
 }
+
 .medicine-icon {
   position: absolute;
   top: -50px;
   right: 370px;
   font-size: 80px;
 }
-.social-icons img{
-   width: 300px;
+
+.social-icons img {
+  width: 250px;
   height: 70px;
-    
+
 }
 
+.home-page{
+  background-color: rgb(239, 252, 252);
+}
 
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
 
+.right-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+  color: white;
+}
+
+.right-nav h4 {
+  margin: 0;
+  cursor: pointer;
+}
+
+.left-nav img {
+  width: 50px;
+}
+
+.header {
+  flex-wrap: wrap;
+  background-color: rgb(138, 185, 186);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-radius: 60px;
+}
+
+.right-nav button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  margin: 50px 30px 50px 30px;
+  justify-content: space-between;
+}
+
+.top-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.left-main{
+  width: 300px;
+}
+
+.left-main h1{
+  font-size: 50px;
+}
+
+.left-main h3{
+  font-size: 20px;
+}
+
+.left-main button{
+  padding: 15px 30px;
+  background-color: rgb(138, 185, 186);
+  border-radius: 30px;
+  border:none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+.left-main button img{
+  width: 20px;
+}
+
+.right-main img{
+  width: 600px;
+  border-radius: 20px;
+}
+
+.bottom-main{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 20px 0;
+  margin-top: 40px;
+
+}
+.bottom-main img{
+  width: 50px;
+  border: 1.5px solid rgb(138, 185, 186);
+  padding: 10px;
+  border-radius: 5px;
+}
