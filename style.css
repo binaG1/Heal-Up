@@ -192,13 +192,11 @@
   padding: 10px;
   border-radius: 5px;
 }
-<<<<<<< HEAD
 
 hr{
   border: solid rgb(216, 216, 216) 1px;
   width: 100%;
-  height: 100%;
-=======
+  height: 100%;}
 .s-nav{
   display:flex;
   justify-content: space-between;
@@ -288,5 +286,4 @@ hr{
 
 hr{
   border: solid 1px;
->>>>>>> 2642bead6478594d714e33c28ec5422a2f18782f
 }
