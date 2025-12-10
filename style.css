@@ -82,10 +82,6 @@
 
 }
 
-.home-page {
-
-}
-
 .left-nav {
   display: flex;
   align-items: center;
@@ -216,22 +212,55 @@
 }
 
 .footer{
+  padding: 40px 20px;
+  background-color: rgb(173, 199, 199);
+  margin: 50px 30px 50px 30px;
+  border-radius: 20px;
+}
+
+.footer-container{
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  background-color: rgb(138, 185, 186);
-  border-radius: 20px;
-  margin: 50px 30px 50px 30px;
+  flex-wrap: wrap;
 }
 
-.footer p{
+.footer-section{
   margin: 10px;
 }
+.footer-section h2{
+  margin-bottom: 15px;
+}
 
+.footer-section ul{
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li{
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-section ul li a:hover{
+  color: blue;
+}
+
+.footer-copy{
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+}
+
+/* css i faqes service.html*/
 .s-nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
   align-items: center;
 }
 
@@ -261,6 +290,7 @@
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
+  margin: 10px 30px 50px 30px;
 }
 
 .s-left-header h1 {
@@ -273,10 +303,26 @@
   width: 500px;
 }
 
+.s-left-header button{
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+}
+
+.s-left-header button a img{
+  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .s-right-header img {
   width: 300px;
   border-radius: 5px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05)
 }
 
 
