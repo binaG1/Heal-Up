@@ -154,6 +154,11 @@
   width: 500px;
 }
 
+.left-main a{
+  text-decoration: none;
+  color: black;
+}
+
 .left-main h1 {
   font-size: 50px;
 }
