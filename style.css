@@ -8,28 +8,38 @@
 
 /* css i faqes login/register */
 .login-page {
-  background-color: aquamarine;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 200px;
+  align-items: center;
+  height: 100vh;
+  background: url('image copy.png') no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .login-box {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: black;
-  width: 350px;
   padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
   text-align: center;
-  height: auto;
-  position: relative;
+
+}
+
+.login-box h1 {
+  color: black;
+  margin-bottom: 10px;
 }
 
 .login-box h2 {
-  color: #268850;
-
+  color: black;
+  margin-bottom: 20px;
 }
 
 .login-box input {
@@ -41,7 +51,7 @@
 }
 
 .login-box button {
-  background-color: #2e8b57;
+  background-color: rgb(63, 149, 214);
   color: white;
   border: none;
   padding: 10px;
@@ -51,35 +61,255 @@
   margin-top: 11px;
 }
 
+.login-box button:hover {
+  background-color: rgb(223, 189, 141);
+}
+
 .login-box a {
-  color: #43b574;
+  color: rgb(63, 149, 214);
   text-decoration: none;
   font-size: 15px;
-  height: 100px;
-  text-align: center;
-
 }
 
-.login-box h1 {
-  color: #2e8b57;
+.reviews-text a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.box button:hover {
-  background-color: rgb(223, 189, 141);
-  color: white;
-
+.reviews-text a:hover {
+  color: rgb(223, 189, 141);
 }
 
-.medicine-icon {
-  position: absolute;
-  top: -50px;
-  right: 370px;
-  font-size: 80px;
+.sup a:hover {
+  color: rgb(223, 189, 141);
+}
+.box a:hover{
+  color: rgb(223, 189, 141);
+}
+.social-icons {
+  margin-top: 20px;
 }
 
 .social-icons img {
-  width: 250px;
-  height: 70px;
+  width: 230px;
+  height: 50px;
+  margin-top: 0 8px;
+}
+
+@media (max-width: 600px) {
+  .login-box {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0;
+
+  }
+
+  .login-box h1,
+  .login-box h2 {
+    font-size: 20px;
+
+  }
+
+  .login-box input,
+  .login-box button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .social-icons img {
+    width: 180px;
+    height: auto;
+  }
+}
+
+/* Css Reviews */
+.review-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('image copy.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex-wrap: wrap;
+}
+
+.review-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: auto;
+  margin: 20px;
+  margin-top: 100px;
+}
+
+.re {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.re a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+}
+
+
+.re a:hover {
+  color: rgb(205, 165, 109);
+}
+
+.review-box h1,
+.review-box h3 {
+  text-align: center;
+  color: black;
+}
+
+.review-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: -2px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.review-box label {
+  display: block;
+  text-align: left;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.mood {
+  text-align: left;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 12px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.radio label {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-box button {
+  width: 100%;
+  margin-top: 25px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(101, 183, 245);
+  cursor: pointer;
+
+}
+
+.review-box button:hover {
+  background-color: rgb(223, 189, 141);
+}
+
+@media (max-width: 600px) {
+  .review-page {
+    padding: 30px;
+    font-size: 16px;
+  }
+
+  .review-page input {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Css Sign Up*/
+
+.signup-page {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('image copy.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.signup-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.signup-box h1 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.signup-box h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-box label {
+  display: flex;
+  margin: 5px;
+}
+
+.signup-box button {
+  background-color: rgb(63, 149, 214);
+  color: white;
+  font-size: 17px;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 11px;
+}
+
+.signup-box button:hover {
+  background-color: rgb(223, 189, 141);
+}
+
+.signup-box a {
+  text-decoration: none;
+
+}
+
+.signup-box a:hover {
+  color: rgb(223, 189, 141);
 
 }
 
