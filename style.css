@@ -108,7 +108,7 @@
 
 .header {
   flex-wrap: wrap;
-  background-color: rgb(138, 185, 186);
+  background-color: rgb(173, 199, 199);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,7 +139,7 @@
   justify-content:space-around;
   align-items: center;
   gap: 20px;
-  background-color: rgb(138, 185, 186);
+  background-color: rgb(173, 199, 199);
   padding: 30px;
   border-radius: 20px;
 }
