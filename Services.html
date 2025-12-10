@@ -14,11 +14,11 @@
             </div>
 
             <div class="s-right-nav">
-                <h4>Home</h4>
-                <h4>Services</h4>
-                <h4>Details Services</h4>
-                <h4>Blog</h4>
-                <button><a href="">Sign In</a></button>
+                <h4><a href="Home.html">Home</a></h4>
+      <h4><a href="Services.html">Service</a></h4>
+      <h4><a href="services_details.html">Service Details</a></h4>
+      <h4><a href="about_us.html">About Us</a></h4>
+      <button><a href="Login.html">Log In</a></button>
             </div>
         </div>
 
