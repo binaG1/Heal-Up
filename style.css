@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+/* css i faqes login/register */
 .login-page {
   background-color: aquamarine;
   display: flex;
@@ -82,11 +83,12 @@
 
 }
 
+/* css i faqes home page */
+
 .left-nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
 }
 
 .right-nav {
@@ -94,7 +96,11 @@
   flex-direction: row;
   align-items: center;
   gap: 25px;
-  color: white;
+}
+
+.right-nav a{
+     color: black;
+  text-decoration: none;
 }
 
 .right-nav h4 {
@@ -108,7 +114,7 @@
 
 .header {
   flex-wrap: wrap;
-  background-color: rgb(173, 199, 199);
+  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,7 +126,7 @@
 .right-nav button {
   padding: 10px 20px;
   border: none;
-  background-color: white;
+  background-color: rgb(173, 199, 199);
   border-radius: 25px;
   cursor: pointer;
 }
@@ -128,7 +134,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  margin: 50px 30px 50px 30px;
+  margin: 30px 30px 50px 30px;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -262,6 +268,11 @@
   justify-content: space-between;
   padding: 30px;
   align-items: center;
+}
+
+.s-nav a{
+   color: black;
+  text-decoration: none;
 }
 
 .s-right-nav {
