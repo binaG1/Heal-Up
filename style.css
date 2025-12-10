@@ -364,3 +364,85 @@
 hr {
   border: solid 1px;
 }
+
+
+.about-page {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+}
+
+.about-main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.about-intro,
+.our-mission,
+.our-services,
+.our-departments,
+.about-team {
+    background-color: rgb(173, 199, 199);
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.about-intro h1,
+.our-mission h2,
+.our-services h2,
+.our-departments h2,
+.about-team h2 {
+    color: #2e8b57;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-intro p,
+.our-mission p,
+.our-services p,
+.about-team p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-services ul {
+    max-width: 700px;
+    margin: 20px auto;
+    padding-left: 20px;
+}
+
+.our-services ul li {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.departments-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.departments-icons img {
+    width: 80px;
+    border: 1.5px solid rgb(138, 185, 186);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-main {
+        gap: 30px;
+    }
+
+    .departments-icons {
+        gap: 30px;
+    }
+}
+
