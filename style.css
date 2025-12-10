@@ -384,6 +384,11 @@
   width: 500px;
 }
 
+.left-main a{
+  text-decoration: none;
+  color: black;
+}
+
 .left-main h1 {
   font-size: 50px;
 }
@@ -676,14 +681,87 @@ hr {
     padding: 10px;
     border-radius: 5px;
 }
+/*css i faqes service_details*/
 
-@media screen and (max-width: 768px) {
-    .about-main {
-        gap: 30px;
-    }
+.details-hero {
+  background-color: rgb(173, 199, 199);
+  margin: 10px 30px 20px 30px;
+  padding: 60px 30px;
+  border-radius: 20px;
+  text-align: center;
+}
 
-    .departments-icons {
-        gap: 30px;
-    }
+.details-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.details-hero p {
+  font-size: 17px;
+  color: #333;
+}
+
+.details-wrapper {
+  margin: 30px 30px 70px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px;
+  align-items: center;
+}
+
+.details-image img {
+  width: 330px;
+  border-radius: 15px;
+  border: 1.5px solid rgb(173, 199, 199);
+  padding: 10px;
+  background-color: white;
+}
+
+.details-content {
+  max-width: 520px;
+}
+
+.details-content h2 {
+  color: #2e8b57;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.details-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.details-content p {
+  line-height: 1.7;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.details-content ul {
+  padding-left: 20px;
+}
+
+.details-content li {
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+.details-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: rgb(173, 199, 199);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.details-btn:hover {
+  background-color: rgb(150, 180, 180);
 }
 
