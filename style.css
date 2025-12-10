@@ -1,9 +1,11 @@
-*{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+* {
+  /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif*/
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 .login-page {
   background-color: aquamarine;
   display: flex;
@@ -58,7 +60,6 @@
 }
 
 .login-box h1 {
-
   color: #2e8b57;
 }
 
@@ -81,8 +82,8 @@
 
 }
 
-.home-page{
-  background-color: rgb(239, 252, 252);
+.home-page {
+
 }
 
 .left-nav {
@@ -117,6 +118,7 @@
   align-items: center;
   padding: 15px 40px;
   border-radius: 60px;
+  margin: 20px;
 }
 
 .right-nav button {
@@ -127,7 +129,7 @@
   cursor: pointer;
 }
 
-.main{
+.main {
   display: flex;
   flex-direction: column;
   margin: 50px 30px 50px 30px;
@@ -138,29 +140,32 @@
 .top-main {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content:space-around;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
+  background-color: rgb(138, 185, 186);
+  padding: 30px;
+  border-radius: 20px;
 }
 
-.left-main{
-  width: 300px;
+.left-main {
+  width: 500px;
 }
 
-.left-main h1{
+.left-main h1 {
   font-size: 50px;
 }
 
-.left-main h3{
+.left-main h3 {
   font-size: 20px;
 }
 
-.left-main button{
+.left-main button {
   padding: 15px 30px;
-  background-color: rgb(138, 185, 186);
+  background-color: white;
   border-radius: 30px;
-  border:none;
-  color: white;
+  border: none;
+  color: black;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -168,61 +173,87 @@
   margin-top: 40px;
 }
 
-.left-main button img{
+.left-main button img {
   width: 20px;
 }
 
-.right-main img{
-  width: 600px;
+.right-main img {
+  width: 400px;
   border-radius: 20px;
 }
 
-.bottom-main{
+.bottom-main {
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   gap: 100px;
-  padding: 20px 0;
+  padding: 30px 0;
   margin-top: 40px;
 
 }
-.bottom-main img{
-  width: 50px;
+
+.bottom-main img {
+  width: 80px;
   border: 1.5px solid rgb(138, 185, 186);
   padding: 10px;
   border-radius: 5px;
 }
 
-hr{
-  border: solid rgb(216, 216, 216) 1px;
-  width: 100%;
-  height: 100%;}
-.s-nav{
-  display:flex;
+.departaments h1, p{
+  display: flex;
+  justify-content: center;
+}
+
+.departaments{
+  margin-top: 80px;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: rgb(138, 185, 186);
+  border-radius: 20px;
+  margin: 50px 30px 50px 30px;
+}
+
+.footer p{
+  margin: 10px;
+}
+
+.s-nav {
+  display: flex;
   justify-content: space-between;
   padding: 20px;
   align-items: center;
 }
 
-.s-right-nav{
+.s-right-nav {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.s-right-nav button{
+.s-right-nav button {
   padding: 8px 15px;
   background-color: rgb(173, 199, 199);
   border: none;
   border-radius: 20px;
 }
 
-.s-right-nav button a{
+.s-right-nav button a {
   text-decoration: none;
   color: black;
 }
 
-.s-header{
+.s-header {
   background-color: rgb(173, 199, 199);
   padding: 50px;
   flex-wrap: wrap;
@@ -232,20 +263,20 @@ hr{
   border-radius: 20px;
 }
 
-.s-left-header h1{
+.s-left-header h1 {
   font-size: 50px;
   padding-bottom: 20px;
 
 }
 
-.s-left-header h4{
+.s-left-header h4 {
   width: 500px;
 }
 
-.s-right-header img{
+.s-right-header img {
   width: 300px;
   border-radius: 5px;
-   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05)
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05)
 }
 
 
@@ -256,15 +287,15 @@ hr{
   border-radius: 5px;
 }
 
-.s-1 button a{
+.s-1 button a {
   text-decoration: none;
   color: black;
 }
 
 .s-main1 {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around; 
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 20px;
 }
 
@@ -277,13 +308,13 @@ hr{
   flex-direction: column;
   justify-content: space-around;
   border-radius: 5px;
-  min-height: 250px; 
+  min-height: 250px;
 }
 
-.s-1 button:hover{
-  background-color:rgb(197, 189, 177);
+.s-1 button:hover {
+  background-color: rgb(197, 189, 177);
 }
 
-hr{
+hr {
   border: solid 1px;
 }
