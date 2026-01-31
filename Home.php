@@ -18,12 +18,11 @@
         </div>
 
         <div class="right-nav">
-            <h4>Home</h4>
-            <h4>Service</h4>
-            <h4>About Us</h4>
-            <h4>Blog</h4>
-            <h4>Contact Us</h4>
-            <button>Sign In</button>
+      <h4><a href="Home.html">Home</a></h4>
+      <h4><a href="Services.html">Service</a></h4>
+      <h4><a href="services_details.html">Service Details</a></h4>
+      <h4><a href="about_us.html">About Us</a></h4>
+      <button><a href="Login.html">Log In</a></button>
         </div>
     </header>
 
@@ -34,7 +33,7 @@
                 <h1>Don't Let Your Health Take a Backseat!</h1>
                 <h3>Compassionate care, advanced medicine, and trusted specialists available 24/7</h3>
                 <button>
-                    Book an Appointment
+                    <a href="services_details.html">Book an appintment</a>
                     <img src="book-black-cover-closed_32354.png" alt="">
                 </button>
             </div>
