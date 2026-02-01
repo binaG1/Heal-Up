@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,11 +19,11 @@
         </div>
 
         <div class="right-nav">
-      <h4><a href="Home.html">Home</a></h4>
-      <h4><a href="Services.html">Service</a></h4>
-      <h4><a href="services_details.html">Service Details</a></h4>
-      <h4><a href="about_us.html">About Us</a></h4>
-      <button><a href="Login.html">Log In</a></button>
+      <h4><a href="Home.php">Home</a></h4>
+      <h4><a href="Services.php">Service</a></h4>
+      <h4><a href="services_details.php">Service Details</a></h4>
+      <h4><a href="about_us.php">About Us</a></h4>
+      <button><a href="Login.php">Log In</a></button>
         </div>
     </header>
 
@@ -33,7 +34,7 @@
                 <h1>Don't Let Your Health Take a Backseat!</h1>
                 <h3>Compassionate care, advanced medicine, and trusted specialists available 24/7</h3>
                 <button>
-                    <a href="services_details.html">Book an appintment</a>
+                    <a href="services_details.php">Book an appintment</a>
                     <img src="book-black-cover-closed_32354.png" alt="">
                 </button>
             </div>

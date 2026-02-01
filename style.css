@@ -452,7 +452,7 @@
   margin-top: 20px;
 }
 
-div.homepageNotified{
+div .homepageNotified{
   display: flex;
   flex-direction: row;
   background-color: #e3e3e3;
@@ -461,11 +461,11 @@ div.homepageNotified{
   margin-top: 50px;
 }
 
-div.homepageNotified h3{
+div .homepageNotified h3{
   margin-bottom: 20px;
 }
 
-div.homepageNotified p{
+div .homepageNotified p{
   color:#848484 ;
   line-height: 150%;
   margin-bottom: 30px;
