@@ -452,6 +452,43 @@
   margin-top: 20px;
 }
 
+div.homepageNotified{
+  display: flex;
+  flex-direction: row;
+  background-color: #e3e3e3;
+  padding: 50px 50px;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+div.homepageNotified h3{
+  margin-bottom: 20px;
+}
+
+div.homepageNotified p{
+  color:#848484 ;
+  line-height: 150%;
+  margin-bottom: 30px;
+}
+
+.emailForm input{
+  width: 20%;
+  padding: 7px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.emailForm button{
+ margin-left: 10px;
+ padding: 7px;
+ border-radius: 5px;
+ border: 1px solid white;
+}
+
+.emailForm button:hover{
+  background-color: rgb(173, 199, 199);
+  border: 1.5px solid black;
+}
 .footer{
   padding: 40px 20px;
   background-color: rgb(173, 199, 199);
