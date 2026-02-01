@@ -59,6 +59,23 @@
         <div class="text">
             <h4>We Serve In Different Areas For Our Patients</h4>
         </div>
+
+        <div class="homepageNotified">
+            <div class="emailForm">
+                <h3>Get Notified Of Any Updates!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Labore et magnam, odit mollitia dignissimos
+                    perferendis ullam voluptatibus voluptates sequi!
+                    Iste dolorum fuga sunt, eos ullam possimus
+                    mollitia et dolorem esse.
+                </p>
+
+                <form action="">
+                    <input type="text" placeholder="Email Address">
+                    <button>Notify</button>
+                </form>
+            </div>
+        </div>
     </main>
 
    <footer class="footer">
