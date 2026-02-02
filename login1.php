@@ -1,39 +1,39 @@
-
 <?php
 session_start();
 include_once 'Database.php';
 include_once 'Studenti.php';
 
-  $errorMessage= "";
+$errorMessage = "";
 
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $db = new Database();
+        $connection = $db->getConnection();
+        $user = new Studenti($connection);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $db = new Database();
-    $connection = $db->getConnection();
-    $user = new Studenti($connection);
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-  
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+        if ($user->login($email, $password)) {
+            $_SESSION['user_id'] = $user->id;
+            $_SESSION['email']   = $email;
+            $_SESSION['password']    = $password;
 
-    
-   if ($user->login($email, $password)) {
-    $_SESSION['user_id'] = $user->id;     
-    $_SESSION['email'] = $email;
-    $_SESSION['role'] = $user->role;       
-    
-    if ($_SESSION['role'] === 'Admin') { 
-         header("Location: dashboard.php"); 
-    } else {
-       header("Location: home.php"); 
-      } exit; 
-    } else {
-     $errorMessage = "Invalid login credentials!";
+            if (isset($_POST['remember'])) {
+                $expires = time() + 86400; 
+                setcookie("email", $email, $expires, "/");
+                setcookie("password", $password, $expires, "/");
+            }
 
+            header("Location: dashboard.php");
+            exit();
+        } else {
+            $errorMessage = "Invalid login credentials!";
+        }
     }
+    
 
-}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -49,8 +49,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     .error-message{
       color: red;
         
-        
     }
+  .remember-container {
+    margin-top: 10px;
+    font-size: 15px;
+    display: flex;          
+    align-items: center;    
+    justify-content: flex-start; 
+    margin-right: 270px;
+  }
+
   </style>
 </head>
 
@@ -61,27 +69,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h2>LOG IN</h2>
 
     <form class="box" action="login1.php" method="POST">
-      <span id="email-error" class="error-message"> <?php if (!empty($errorMessage)) echo $errorMessage; ?>
-    </span>
+        <span id="email-error" class="error-message"> <?php if (!empty($errorMessage)) echo $errorMessage; ?>
+      </span>
       <input type="email" name="email" placeholder="Write your email" required><br>
-      
-    
       <input type="password" name="password" placeholder="Write your Password" required><br>
       
-    
-      <a href="">Forgot your password?</a>
-      <button type="submit">LOG IN</button><br>
+      <div class="remember-container">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember  </label> 
+      </div>
+
+      <button type="submit" name="login" >LOG IN</button><br>
     </form>
 
     <p class="sup">Don't have an account? <a href="Register.php">Sign up</a></p>
-
     <p class="reviews-text"><a href="reviews.php">Reviews</a></p>
-
     <div class="social-icons">
       <img src="images.jpg" alt="social-icons" width="30">
     </div>
   </div>
 
 </body>
-
 </html>

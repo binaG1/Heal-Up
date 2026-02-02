@@ -1,9 +1,17 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id']) ) {
-    header("Location: login1.php");
-    exit;
-}
+    session_start();
+    if (!isset($_SESSION['user_id']) ) {
+        header("Location: login1.php");
+        exit;
+    }
+
+    if (!isset($_SESSION['user']) && isset($_COOKIE['remember_user'])) {
+        $_SESSION['user'] = $_COOKIE['remember_user'];
+        $_SESSION['role'] = $_COOKIE['remember_role'];
+    }
+ 
+
+  
 ?>
 
 <!DOCTYPE html>
@@ -17,11 +25,12 @@ if (!isset($_SESSION['user_id']) ) {
             background: #f4f4f4; 
         }
         .container { 
-        width: 80%;
+            width: 80%;
             margin: 50px auto; 
             background: #fff;
-            padding: 20px; 
+            padding: 80px; 
             border-radius: 8px; 
+            font-size: 20px;
           }
         h1 { 
         text-align: center; 
@@ -36,16 +45,24 @@ if (!isset($_SESSION['user_id']) ) {
         a { 
             text-decoration: none; 
             color: #333; 
-            font-weight: bold; }
+            font-weight: bold; 
+        }
         a:hover { 
             color: #007BFF; 
         }
+        @media (max-width: 600px) { 
+            .container { 
+                width: 100%; 
+                margin: 20px auto;
+                padding: 15px;
+            }
+         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome Admin</h1>
-        <p>Menaxho sistemin përmes opsioneve më poshtë:</p>
+        <h1>Welcome Admin</h1> <br><br>
+        <p>Menaxho sistemin përmes opsioneve më poshtë:</p> 
         <ul>
             <li><a href="manage_users.php">👥 Menaxho Përdoruesit</a></li>
             <li><a href="manage_pages.php">📄 Menaxho Faqet</a></li>
