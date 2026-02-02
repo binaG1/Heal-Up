@@ -114,7 +114,7 @@
                 <h2>Contact Us</h2>
                 <ul>
                     <li>Email: info@healup.com</li>
-                    <li>Phone: +355 69 123 4567</li>
+                    <li>Phone: +383 49 123 456</li>
                     <li>Address: Rruga Arberia, Pristina</li>
                 </ul>
             </div>
