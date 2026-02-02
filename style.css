@@ -436,14 +436,123 @@
   border-radius: 5px;
 }
 
-.departaments h1, p{
-  display: flex;
-  justify-content: center;
+.slider-wrapper {
+    position: relative;
+    width: 500px;
+    
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+
+.slider {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.slide {
+    flex-shrink: 0;
+    margin: 0 12px;
+}
+
+.slide img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+
+    background-color: #f5f5f5;
+    padding: 14px;
+    border-radius: 14px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.slider-wrapper button {
+    position: absolute;
+    bottom: -40px;              
+    background-color: #111;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-wrapper button:hover {
+    background-color: #000;
+}
+
+.slider-wrapper .prev {
+    left: 42%;
+}
+
+.slider-wrapper .next {
+    right: 42%;
+}
+
+.dots {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.dots span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dots span.active {
+    background-color: #111;
+}
+
+@media (max-width: 768px) {
+    .slide img {
+        width: 100px;
+        height: 100px;
+        padding: 12px;
+    }
+
+    .slider-wrapper .prev {
+        left: 38%;
+    }
+
+    .slider-wrapper .next {
+        right: 38%;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        width: 85px;
+        height: 85px;
+        padding: 10px;
+    }
+
+    .slider-wrapper button {
+        bottom: -45px;
+    }
 }
 
 .departaments{
-  margin-top: 80px;
+  margin-top: 30px;
+  text-align: center;
 }
+
 
 .text{
   display: flex;
@@ -452,7 +561,7 @@
   margin-top: 20px;
 }
 
-div .homepageNotified{
+.homepageNotified{
   display: flex;
   flex-direction: row;
   background-color: #e3e3e3;
@@ -460,12 +569,11 @@ div .homepageNotified{
   border-radius: 20px;
   margin-top: 50px;
 }
-
-div .homepageNotified h3{
+.homepageNotified h3{
   margin-bottom: 20px;
 }
 
-div .homepageNotified p{
+.homepageNotified p{
   color:#848484 ;
   line-height: 150%;
   margin-bottom: 30px;

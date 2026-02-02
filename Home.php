@@ -48,14 +48,20 @@
             <p>OUR DEPARTAMENTS</p>
             <h1>For Your Health</h1>
         </div>
-        <div class="bottom-main">
-            <img src="kidney.png" alt="">
-            <img src="heart.png" alt="">
-            <img src="healthcare_11241987.png" alt="">
-            <img src="tooth.png" alt="">
-            <img src="brain.png" alt="">
-            <img src="arthritis.png" alt="">
-        </div>
+
+    <div class="slider-wrapper">
+    <button class="prev">❮</button>
+    <div class="slider">
+        <div class="slide"><img src="mushkerite.png" alt="Kidney"></div>
+        <div class="slide"><img src="neurologji.png" alt="Heart"></div>
+        <div class="slide"><img src="ortho.png" alt="Tooth"></div>
+        <div class="slide"><img src="veshkat.png" alt="Brain"></div>
+        <div class="slide"><img src="zemra.png" alt="Arthritis"></div>
+    </div>
+    <button class="next">❯</button>
+
+    <div class="dots"></div>
+</div>
 
         <div class="text">
             <h4>We Serve In Different Areas For Our Patients</h4>
@@ -116,6 +122,70 @@
         
          <p class="footer-copy">  2025 HealUp. All rights reserved.</p>
     </footer>
+
+
+<script>
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.dots');
+
+let index = 0;
+const totalSlides = slides.length;
+
+for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+        index = i;
+        updateSlider();
+    });
+    dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll('.dots span');
+
+function updateSlider() {
+    const slideWidth = slides[0].clientWidth + 20;
+    slider.style.transform = `translateX(-${index * slideWidth}px)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides; 
+    updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % totalSlides; 
+    updateSlider();
+});
+
+let startX = 0;
+let isDragging = false;
+
+slider.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+});
+
+slider.addEventListener('touchmove', e => {
+    if (!isDragging) return;
+    const moveX = e.touches[0].clientX - startX;
+    slider.style.transform = `translateX(${-index * (slides[0].clientWidth + 20) + moveX}px)`;
+});
+
+slider.addEventListener('touchend', e => {
+    isDragging = false;
+    const diff = e.changedTouches[0].clientX - startX;
+    if (diff > 50) index = (index - 1 + totalSlides) % totalSlides;
+    else if (diff < -50) index = (index + 1) % totalSlides;
+    updateSlider();
+});
+
+    </script>
 </body>
 
 </html>
