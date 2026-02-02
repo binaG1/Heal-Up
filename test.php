@@ -15,7 +15,7 @@ class TerminDB {
         }
     }
 
-    // READ - merr të gjitha terminet
+    // READ 
     public function getAll(): array {
         $stmt = $this->pdo->query("SELECT * FROM terminet");
         return $stmt->fetchAll();
@@ -28,13 +28,12 @@ class TerminDB {
         return $stmt->execute([$emri_mbiemri, $created_at]);
     }
 
-    // DELETE individual
+    // DELETE 
     public function delete(int $id): bool {
         $sql = "DELETE FROM terminet WHERE id = ?";
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([$id]);
     }
-
 
     // UPDATE
     public function update(int $id, string $emri_mbiemri, string $created_at): bool {
@@ -42,33 +41,44 @@ class TerminDB {
         $stmt = $this->pdo->prepare($sql);
         return $stmt->execute([$emri_mbiemri, $created_at, $id]);
     }
-}
 
+    // GET 
+    public function getById(int $id): ?array {
+        $stmt = $this->pdo->prepare("SELECT * FROM terminet WHERE id = ?");
+        $stmt->execute([$id]);
+        $result = $stmt->fetch();
+        return $result ?: null;
+    }
+}
 
 $terminDB = new TerminDB("localhost", "pdo_db_test", "root", "");
 
-// INSERT nga forma POST
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['emri_mbiemri'], $_POST['datetime'])) {
+// EDIT
+$editTermin = null;
+if(isset($_GET['action'], $_GET['id']) && $_GET['action'] === 'edit'){
+    $editTermin = $terminDB->getById((int)$_GET['id']);
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['emri_mbiemri'], $_POST['datetime'])){
+        $status = $terminDB->update((int)$_GET['id'], $_POST['emri_mbiemri'], $_POST['datetime']) ? 1 : 0;
+        header("Location: ?action=update&status=$status");
+        exit;
+    }
+}
+
+// INSERT POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['emri_mbiemri'], $_POST['datetime']) && !$editTermin) {
     $status = $terminDB->create($_POST['emri_mbiemri'], $_POST['datetime']) ? 1 : 0;
     header("Location: ?action=insert&status=$status");
     exit;
 }
 
-// DELETE individual
+// DELETE
 if(isset($_GET['action'], $_GET['id']) && $_GET['action'] === 'delete'){
     $status = $terminDB->delete((int)$_GET['id']) ? 1 : 0;
     header("Location: ?action=delete&status=$status");
     exit;
 }
 
-// UPDATE 
-if(isset($_GET['action'], $_GET['id']) && $_GET['action'] === 'edit'){
-    $terminDB->update((int)$_GET['id'], "Filan Fisteku", "2025-11-25");
-    header("Location: ?action=update&status=1");
-    exit;
-}
-
-// Merr të gjitha terminet për shfaqje
 $terminet = $terminDB->getAll();
 ?>
 
@@ -89,14 +99,11 @@ $terminet = $terminDB->getAll();
     switch($_GET['action']){
         case "insert": echo $_GET['status']==1?"Insert was performed successfully":"Something went wrong while inserting data!"; break;
         case "delete": echo $_GET['status']==1?"Delete was performed successfully":"Something went wrong while deleting data!"; break;
-        case "delete_all": echo $_GET['status']==1?"All patients deleted successfully":"Something went wrong while deleting all patients!"; break;
         case "update": echo $_GET['status']==1?"Update was performed successfully":"Something went wrong while updating data!"; break;
     }
     ?>
 </div>
 <?php endif; ?>
-
-
 
 <?php if(count($terminet)): ?>
 <div class="table-responsive">
@@ -111,7 +118,7 @@ $terminet = $terminDB->getAll();
         <?php foreach($terminet as $termin): ?>
         <tr>
             <td><?= $termin['id'] ?></td>
-            <td><?= $termin['emri_mbiemri'] ?></td>
+            <td><?= htmlspecialchars($termin['emri_mbiemri']) ?></td>
             <td><?= $termin['status'] ?></td>
             <td><?= $termin['created_at'] ?></td>
             <td>
@@ -127,15 +134,33 @@ $terminet = $terminDB->getAll();
 <?php endif; ?>
 
 <div class="container my-5">
-<form method="post">
-    <div class="mb-3">
-        <input type="text" name="emri_mbiemri" class="form-control" placeholder="Emri dhe mbiemri" required>
-    </div>
-    <div class="mb-3">
-        <input type="date" name="datetime" class="form-control" required>
-    </div>
-    <button type="submit" class="btn btn-sm btn-primary">Save</button>
-</form>
+<?php if($editTermin): ?>
+    <h5>Edit Termin</h5>
+    <form method="post">
+        <div class="mb-3">
+            <input type="text" name="emri_mbiemri" class="form-control" 
+                   value="<?= htmlspecialchars($editTermin['emri_mbiemri']) ?>" required>
+        </div>
+        <div class="mb-3">
+            <input type="date" name="datetime" class="form-control" 
+                   value="<?= date('Y-m-d', strtotime($editTermin['created_at'])) ?>" required>
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Update</button>
+        <a href="./" class="btn btn-sm btn-secondary">Cancel</a>
+    </form>
+<?php else: ?>
+    <h5>Add New Termin</h5>
+    <form method="post">
+        <div class="mb-3">
+            <input type="text" name="emri_mbiemri" class="form-control" placeholder="Emri dhe mbiemri" required>
+        </div>
+        <div class="mb-3">
+            <input type="date" name="datetime" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-sm btn-primary">Save</button>
+    </form>
+<?php endif; ?>
 </div>
+
 </body>
 </html>
