@@ -15,10 +15,10 @@
 
             <div class="s-right-nav">
                 <h4><a href="Home.html">Home</a></h4>
-      <h4><a href="Services.html">Service</a></h4>
-      <h4><a href="services_details.html">Service Details</a></h4>
-      <h4><a href="about_us.html">About Us</a></h4>
-      <button><a href="Login.html">Log In</a></button>
+      <h4><a href="Services.php">Service</a></h4>
+      <h4><a href="services_details.php">Service Details</a></h4>
+      <h4><a href="about_us.php">About Us</a></h4>
+      <button><a href="login1.php">Log In</a></button>
             </div>
         </div>
 
@@ -27,7 +27,7 @@
          <div class="s-left-header">
              <h1>Our Medical Services</h1>
              <h4>We offer a wide range of modern medical services designed to provide you with professional, safe, and fast healthcare</h4>
-             <button>Learn More <a href="services_details.html" title="" > <img src="right-arrow.png" alt=""></a></button>
+             <button>Learn More <a href="services_details.php" title="" > <img src="right-arrow.png" alt=""></a></button>
          </div>
 
          <div class="s-right-header">
