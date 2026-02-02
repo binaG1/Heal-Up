@@ -14,7 +14,7 @@
             </div>
 
             <div class="s-right-nav">
-                <h4><a href="Home.html">Home</a></h4>
+                <h4><a href="Home.php">Home</a></h4>
       <h4><a href="Services.php">Service</a></h4>
       <h4><a href="services_details.php">Service Details</a></h4>
       <h4><a href="about_us.php">About Us</a></h4>
