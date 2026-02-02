@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="email" name="email" placeholder="Your email" required><br> <br>
            
             <label><strong>Overall Rating</strong></label>
-            <select style="padding: 10px; width: 416px;" name="experience" required> 
+            <select style="padding: 10px; width: 320px;" name="experience" required> 
             <option  value="1">★☆☆☆☆</option> 
                 <option value="2">★★☆☆☆</option> 
                 <option value="3">★★★☆☆</option> 
