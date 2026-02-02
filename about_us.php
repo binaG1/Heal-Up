@@ -16,11 +16,11 @@
         </div>
 
         <div class="right-nav">
-            <h4><a href="Home.html">Home</a></h4>
-            <h4><a href="Services.html">Service</a></h4>
-            <h4><a href="services_details.html">Service Details</a></h4>
-            <h4><a href="about_us.html">About Us</a></h4>
-            <button><a href="Login.html">Log In</a></button>
+            <h4><a href="Home.php">Home</a></h4>
+            <h4><a href="Services.php">Service</a></h4>
+            <h4><a href="services_details.php">Service Details</a></h4>
+            <h4><a href="about_us.php">About Us</a></h4>
+            <button><a href="Login.php">Log In</a></button>
         </div>
     </header>
 
@@ -86,10 +86,10 @@
             <div class="footer-section">
                 <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="services_details.html">Service Details</a></li>
-                    <li><a href="Login.html">Login</a></li>
+                    <li><a href="Home.php">Home</a></li>
+                    <li><a href="Services.php">Services</a></li>
+                    <li><a href="services_details.php">Service Details</a></li>
+                    <li><a href="Login.php">Login</a></li>
                     <li><a href="#">Reviews</a></li>
                 </ul>
             </div>
