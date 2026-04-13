@@ -81,7 +81,7 @@ $errorMessage = "";
 
       <button type="submit" name="login" >LOG IN</button><br>
     </form>
-
+   
     <p class="sup">Don't have an account? <a href="Register.php">Sign up</a></p>
     <p class="reviews-text"><a href="reviews.php">Reviews</a></p>
     <div class="social-icons">
