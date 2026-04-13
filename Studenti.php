@@ -50,7 +50,7 @@ class Studenti {
             $_SESSION['email']   = $row['email'];
             $_SESSION['role']    = $row['role'];
 
-            if ($email === 'ga1@gmail.com' || $email === 'godenii@gmail.com' || $email === '1234@gmail.com') {
+            if ($email === 'ga1@gmail.com' || $email === 'godenialb@gmail.com' || $email === '1234@gmail.com') {
                 header("Location: dashboard.php");
             } else {
                 header("Location: Home.php");

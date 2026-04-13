@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $connection = $db->getConnection();
     $user = new Studenti($connection);
 
-    if ($email == 'ga1@gmail.com' || $email == 'godenii@gmail.com' || $email == '1234@gmail.com') { 
+    if ($email == 'ga1@gmail.com' || $email == 'godenialb@gmail.com' || $email == '1234@gmail.com') { 
         $role = 'Admin'; 
     } else { 
         $role = 'User'; 
